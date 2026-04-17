@@ -25,6 +25,11 @@ public class Marca {
     public String getPais() {
         return pais;
     }
+
+    @Override
+    public String toString() {
+        return "Marca{" + "nombre=" + nombre + ", pais=" + pais + '}';
+    }
     
-    
+     
 }

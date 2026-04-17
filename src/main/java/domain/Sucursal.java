@@ -28,4 +28,5 @@ public class Sucursal {
     public Responsable getResponsable() {
         return responsable;
     }
+    
 }

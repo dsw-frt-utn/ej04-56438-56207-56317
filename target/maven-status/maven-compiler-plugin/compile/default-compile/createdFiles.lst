@@ -1,4 +1,5 @@
 data\Persistencia.class
+views\agregarVehiculo.class
 domain\VehiculoCombustible.class
 domain\Marca.class
 domain\Responsable.class
