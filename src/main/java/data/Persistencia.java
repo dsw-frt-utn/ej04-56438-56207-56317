@@ -25,15 +25,20 @@ public class Persistencia {
     }
     
     private static void inicializarVehiculos(){
-        Sucursal s1 = sucursales.get(0);
-        Sucursal s2 = sucursales.get(1);
-        
-        VehiculoElectrico v1 = new VehiculoElectrico("AE123FG", "Renault", "Kangoo E-Tech", 2020, 1000, s1, 16);
-        VehiculoElectrico v2 = new VehiculoElectrico("AF456HI", "Ford", "E-Transit", 2021, 1300, s2, 16);
-
-        VehiculoCombustible v3 = new VehiculoCombustible("AC789JK", "Iveco", "Daily", 2023, 1200, s1, 8, 1.5);
-        VehiculoCombustible v4 = new VehiculoCombustible("AD321LM", "Mercedes", "Sprinter", 2020, 1200, s2, 7, 1);
-        
+       
+    Sucursal s1 = sucursales.get(0);
+    Sucursal s2 = sucursales.get(1);
+    
+    Marca renault = new Marca("Renault", "Francia");
+    Marca ford = new Marca("Ford", "EE.UU.");
+    Marca iveco = new Marca("Iveco", "Italia");
+    Marca mercedes = new Marca("Mercedes", "Alemania");
+    
+    VehiculoElectrico v1 = new VehiculoElectrico(16.0, "AE123FG", renault, "Kangoo E-Tech", 2020, 1000.0, s1, VehiculoTipo.ELECTRICO);
+    VehiculoElectrico v2 = new VehiculoElectrico(16.0, "AF456HI", ford, "E-Transit", 2021, 1300.0, s2, VehiculoTipo.ELECTRICO);
+  
+    VehiculoCombustible v3 = new VehiculoCombustible(8.0, 1.5, "AC789JK", iveco, "Daily", 2023, 1200.0, s1, VehiculoTipo.COMBUSTIBLE);
+    VehiculoCombustible v4 = new VehiculoCombustible(7.0, 1.0, "AD321LM", mercedes, "Sprinter", 2020, 1200.0, s2, VehiculoTipo.COMBUSTIBLE);    
         vehiculos.add(v1);
         vehiculos.add(v2);
         vehiculos.add(v3);
