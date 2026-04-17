@@ -12,6 +12,7 @@ public class VehiculoViewModel {
     private int anio;
     private double litrosExtra;
     private double kmARecorrer;
+    private String marcaNombre;
     
     public VehiculoViewModel(Vehiculo vehiculo){
         if(vehiculo == null)return;
@@ -21,6 +22,7 @@ public class VehiculoViewModel {
         sucursal = vehiculo.getCodigoSucursal();
         capacidadCarga = vehiculo.getCapacidadCarga();
         anio = vehiculo.getAnio();
+        this.marcaNombre = vehiculo.getMarca().getNombre();
         kmPorLitro = vehiculo instanceof VehiculoCombustible ? ((VehiculoCombustible)vehiculo).getKilometrosPorLitro() : 0;
         litrosExtra = vehiculo instanceof VehiculoCombustible ? ((VehiculoCombustible)vehiculo).getLitrosExtra() : 0;
         kmARecorrer = 100;
@@ -60,5 +62,9 @@ public class VehiculoViewModel {
 
     public String getSucursal() {
         return sucursal;
+    }
+
+    Object getMarca() {
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 }

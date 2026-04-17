@@ -3,9 +3,8 @@ package domain;
 public class VehiculoElectrico extends Vehiculo {
     private double kwhBase;
 
-    public VehiculoElectrico(String patente, String marca, String modelo, int anio, double capacidadCarga,
-                             Sucursal sucursal, double kwhBase) {
-        super(VehiculoTipo.ELECTRICO, patente, marca, modelo, anio, capacidadCarga, sucursal);
+    public VehiculoElectrico(double kwhBase, String patente, Marca marca, String modelo, int anio, double capacidadCarga, Sucursal sucursal, VehiculoTipo tipo) {
+        super(patente, marca, modelo, anio, capacidadCarga, sucursal, tipo);
         this.kwhBase = kwhBase;
     }
 
