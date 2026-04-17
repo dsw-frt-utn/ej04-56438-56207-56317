@@ -2,6 +2,7 @@ package views;
 
 import data.Persistencia;
 import domain.Vehiculo;
+import domain.VehiculoCombustible;
 import domain.VehiculoTipo;
 import java.util.ArrayList;
 import java.util.Map;
@@ -31,4 +32,12 @@ public class Controlador {
         }
         return new double[] {consumoElectricos, consumoCombustible};
     }
+    public static void agregarVehiculo(Vehiculo vehiculo){
+        Persistencia.agregarVehiculo(vehiculo);
+    }
+
+    
+    
+    
+    
 }
