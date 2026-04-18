@@ -6,6 +6,7 @@ import domain.VehiculoTipo;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Optional;
+import views.VehiculoViewModel;
 
 public class Controlador {
     
@@ -31,4 +32,10 @@ public class Controlador {
         }
         return new double[] {consumoElectricos, consumoCombustible};
     }
+    public static void agregarVehiculo (Vehiculo vehiculo){
+        Persistencia.agregarVehiculo(vehiculo);
+    }
+    
+    
+    
 }
